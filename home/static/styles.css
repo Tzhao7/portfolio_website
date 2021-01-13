@@ -200,18 +200,6 @@
     padding: 180px;
 }
 
-/*@keyframes slide {
-    2.7% {
-        background-image: url(images/NewYorkCity.bmp);
-    }
-    27.7% {
-        background-image: url(images/Space.bmp);
-    }
-    30.5% {
-        background-image: url(images/Uconn.jpg);
-    }
-}*/
-
 .welcome__content {
     width: 100%;
     height: 100%;
