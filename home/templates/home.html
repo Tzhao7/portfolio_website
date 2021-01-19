@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-    <link href="https://icons8.com/icon/86958/resume">
-    <link href="https://icons8.com/icon/kFJzAZryEscq/linkedin-circled">
-    <link href="https://icons8.com/icon/106567/github">
-    <link href="https://icons8.com/icon/bqI4gOgp4z1f/email-open">
 </head>
 <body>
     <nav class="navbar">
@@ -31,10 +27,10 @@
                     <a href="#about" class="navbar__links" id="about-page">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#projects" class="navbar__links" id="projects-page">Projects</a>
+                    <a href="#experience" class="navbar__links" id="experience-page">Experience</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="#experience" class="navbar__links" id="experience-page">Experience</a>
+                    <a href="#projects" class="navbar__links" id="projects-page">Projects</a>
                 </li>
             </ul>
         </div>
@@ -54,7 +50,7 @@
     <div class="intro">
         <div class="intro-text">
             <h1 class="hide">
-                <span class="text">Terry Zhao</span>
+                <span class="text">Terry Zhao's</span>
             </h1>
             <h1 class="hide">
                 <span class="text">Portfolio</span>
@@ -69,47 +65,29 @@
         <div class="about" id="about">
             <div class="about__container">
                 <h1>About Me</h1>
-                <img src="{% static '/images/Google.bmp' %}" alt="Google" id="Google">
+                <img src="{% static '/images/Me.JPG' %}" alt="Me" id="Me">
                 <p>Hello, I'm Terry Zhao and I am a junior majoring in Electrical and Computer Engineering at the University of Connecticut.
-                    I have an interest in full-stack development having done front-end and back-end work in internships and projects.
+                    I have an interest in full-stack web development having done front-end and back-end work in internships and projects.
                 </p>
                 <div class="info__container">
-                    <a href="https://www.linkedin.com/in/terry-zhao-1a68b418a" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin-circled--v3.png"/></a> 
-                    <a href="https://github.com/Tzhao7" target="_blank"><img src="https://img.icons8.com/material-rounded/48/000000/github.png"/></a>
-                    <a href="mailto: terry.zhao@uconn.edu" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/email-open.png"/></a> 
-                    <img src="https://img.icons8.com/material/48/000000/resume--v1.png"/>
-                </div>
-            </div>
-        </div>
-        <div class="projects" id="projects">
-            <h1>Projects</h1>
-            <div class="projects__container">
-                <div class="img__container" id="card1">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <img src="{% static '/images/Spoonacular.bmp' %}" alt="Spoonacular" class="Spoonacular">
-                    <div class="description">
-                        <h2>Recipe App</h2>
-                        <button data-modal-target="#modal_3">Learn More</button>
+                    <div class="button">
+                        <div class="icon"><a href="https://www.linkedin.com/in/terry-zhao-1a68b418a" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+                        <span>LinkedIn</span>
+                    </div>
+                    </a>
+                    <div class="button">
+                        <div class="icon"><a href="https://github.com/Tzhao7" target="_blank"><i class="fab fa-github"></i></a></div>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon"><a href="mailto: terry.zhao@uconn.edu" target="_blank"><i class="fas fa-envelope-square"></i></a></div>
+                        <span>Email</span>
+                    </div>
+                    <div class="button">
+                        <div class="icon"><a href="{% static '/documents/TZ_resume_display.pdf' %}" target="_blank"><i class="fas fa-file"></i></a></div>
+                        <span>Resume</span>
                     </div>
                 </div>
-                <div class="img__container" id="card2">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <img src="{% static '/images/Game.bmp' %}" alt="Game" class="Game">
-                    <div class="description">
-                        <h2>Adventure Game</h2>
-                        <button>Learn More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="modal" id="modal_3">
-                <h2>Spoonacular Recipe App</h2>
-                <button data-close-button class="modal__close">&times;</button>
             </div>
         </div>
         <div class="experience" id="experience">
@@ -126,6 +104,7 @@
                         <div class="description">
                             <h2>Electric Boat</h2>
                             <p>Summer 2019</p>
+                            <p>Winter 2019</p>
                             <p>Summer 2020</p>
                             <button data-modal-target="#modal_1">Learn More</button>
                         </div>
@@ -151,41 +130,243 @@
             </div>
             <div class="modal" id="modal_1">
                 <h2>Electric Boat Internship Experience</h2>
-                <p>During my two summers interning at Electric Boat, I have gained considerable amounts of 
-                    hands-on experience in software engineering applications. Unfortunately there is no physical code to show
-                    of this work because of the security regarding Electric Boat.
+                <p>I have gained a considerable amount of practical experience interning at General Dynamics Electric Boat. During the summer of 2019, I created a project-specific TCP & UDP
+                    communication test tool that verifies messages between impressed current cathodic protection interfaces. The winter of that year, I created a GUI that communicates with 
+                    shipboard amplifiers and displays their triaxial gains, current, and more, from which user can modify currents and log recorded data as needed. 
+                    In addition, I worked on recreating the quantitative simulation portion of the Electric Plant Control Panel Model using MATLAB and Simulink.
+                    This past summer, I created a multi-threaded communication test tool for a functioning battery monitoring emulator, and created and integrated 
+                    several modules that facilitate commmuncation between sensor and data acquisition modules for the Software Verification Platform.
+                    Given a set of different projects every internship, I have been exposed to a wide range of languages, software, and tools, some of which were learned on-the-go,
+                    while others I were familiar with. Unfortunately, because Electric Boat is a US government contractor, the work done required a secret clearance, 
+                    meaning that physical code cannot leave company premises.
                 </p>
+                <div class="slideshow">
+                    <div class="slides">
+                        <input type="radio" name="radio__btn" id="radio1">
+                        <input type="radio" name="radio__btn" id="radio2">
+                        <input type="radio" name="radio__btn" id="radio3">
+                        <div class="slide first">
+                            <h1>Software Skills (Summer 2019) </h1>
+                            <div class="skillBox">
+                                <p>Python</p>
+                                <p>90%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>VBA</p>
+                                <p>50%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>Wireshark</p>
+                                <p>60%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                                <h1>Software Skills (Winter 2019) </h1>
+                                <div class="skillBox">
+                                    <p>C++</p>
+                                    <p>70%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skillBox">
+                                    <p>Python</p>
+                                    <p>70%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skillBox">
+                                    <p>MATLAB/Simulink</p>
+                                    <p>50%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skillBox">
+                                    <p>Wireshark</p>
+                                    <p>70%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="slide">
+                                <h1>Software Skills (Summer 2020) </h1>
+                                <div class="skillBox">
+                                    <p>C++</p>
+                                    <p>90%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skillBox">
+                                    <p>Java</p>
+                                    <p>85%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skillBox">
+                                    <p>GitLab</p>
+                                    <p>85%</p>
+                                    <div class="skill">
+                                        <div class="skill_level" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="navigation__auto">
+                            <div class="auto__btn1"></div>
+                            <div class="auto__btn2"></div>
+                            <div class="auto__btn3"></div>
+                        </div>
+                    </div>
+                    <div class="navigation__manual">
+                        <label for="radio1" class="manual__btn"></label>
+                        <label for="radio2" class="manual__btn"></label>
+                        <label for="radio3" class="manual__btn"></label>
+                    </div>
+                </div>
                 <button data-close-button class="modal__close">&times;</button>
             </div>
             <div class="modal" id="modal_2">
                 <h2>UConn Research Experience</h2>
+                <p>I work as an undergraduate researcher under the ReTHi group of UConn's System Optimization Laboratory. Alongside several graduate students, I modeled several components of the
+                    Oxygen Generation Assembly (OGA) according to behavioral characteristics including nominal power consumption and thermal effects. These state-space analysis results will be run
+                    through regression analysis to optimize the individual components of the OGA. The work that we have done has been compiled as part of a future presentation to ReTHi advisers.</p>
+                <div class="skill__chart">
+                    <h1>Software Skills</h1>
+                    <div class="skillBox">
+                        <p>MATLAB</p>
+                        <p>90%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skillBox">
+                        <p>Simulink</p>
+                        <p>85%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skillBox">
+                        <p>Python</p>
+                        <p>85%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
                 <button data-close-button class="modal__close">&times;</button>
             </div>
         </div>
-        <div id="overlay"></div>
-                <!--<div class="research">
-                    <h1>Research</h1>
-                    <img src="{% static '/images/UConnEng.bmp' %}" alt="Uconn Engineering">
-                    <div class="description">
-                        <h2>UConn Undergraduate Research</h2>
-                        <p>2020 Spring Semester</p>
-                        <p>2020 Fall Semester</p>
-                        <a href="/" class="click">Learn More</a>
+        <div class="projects" id="projects">
+            <h1>Projects</h1>
+            <div class="projects__container">
+                <div class="project__card">
+                    <div class="img__container" id="card1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="{% static '/images/Spoonacular.bmp' %}" alt="Spoonacular" class="Spoonacular">
+                        <div class="description">
+                            <h2>Recipe App</h2>
+                            <button data-modal-target="#modal_3">Learn More</button>
+                        </div>
                     </div>
-                </div>-->
-            <!-- <div class="dropdown">
-                <button class="drop__btn" onclick="dropDownMenu()">Internships<i class="fas fa-caret-down"></i></button>
-                <div class="dropdown__content" id="myDropDown">
-                    <a href="/" class="internship__1">Electric Boat</a>
+                </div>
+                <div class="project__card">
+                    <div class="img__container" id="card2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="{% static '/images/Game.bmp' %}" alt="Game" class="Game">
+                        <div class="description">
+                            <h2>Adventure Game</h2>
+                            <button data-modal-target="#modal_4">Learn More</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="drop__btn" onclick="dropDownMenu()">Research<i class="fas fa-caret-down"></i></button>
-                <div class="dropdown__content" id="myDropDown">
-                    <a href="/" class="research__1">UConn</a>
+            <div class="modal" id="modal_3">
+                <h2>Spoonacular Recipe App</h2>
+                <p>Inspired by a need for quarantine cooking ideas, this app communicates with the Spoonacular API to parse inputted recipe data and return the desired results.
+                    There are multiple settings like "Search By Recipes By Ingredients", "Search By Recipe", "Guess Nutrition By Dish Name", "Get Ingredient Substitutes" and more. 
+                    While still in the works, this app will soon be completed (link will be below) and will be a branching development from this personal portfolio Django project. 
+                </p>
+                <div class="skill__chart">
+                    <h1>Software Skills</h1>
+                    <div class="skillBox">
+                        <p>Python</p>
+                        <p>90%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skillBox">
+                        <p>HTML</p>
+                        <p>85%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skillBox">
+                        <p>CSS</p>
+                        <p>85%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skillBox">
+                        <p>JavaScript</p>
+                        <p>85%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 85%"></div>
+                        </div>
+                    </div>
                 </div>
+                <button data-close-button class="modal__close">&times;</button>
             </div>
-        </div> -->
+            <div class="modal" id="modal_4">
+                <h2>Adventure Game</h2>
+                <p>This multiplayer adventure game is a collaborative project with a school friend and is currently in the conceptual development stage. 
+                    Most of the work that has been done so far includes planning, whether it be identifying the language and game engine of choice, repository platform,
+                    or brainstorming the overarching game concept. In addition, much of it has been a do-as-we-learn process, as both of us do not have previous experience 
+                    with Unreal Engine. When the game is ready for deployment, the link will be below as another branching application from this Django project. 
+                </p>
+                <div class="skill__chart">
+                    <h1>Software Skills</h1>
+                    <div class="skillBox">
+                        <p>C++</p>
+                        <p>90%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skillBox">
+                        <p>Unreal Engine</p>
+                        <p>85%</p>
+                        <div class="skill">
+                            <div class="skill_level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="overlay"></div>
         <!-- Footer Section-->
         <div class="footer__container" id="contact">
            <div class="footer__links">
@@ -204,5 +385,15 @@
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
     crossorigin="anonymous"></script>
     <script src="{% static '/app.js' %}"></script>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+        if (counter > 3) {
+            counter = 1;
+        }
+    }, 5000);
+    </script>
 </body>
 </html>

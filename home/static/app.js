@@ -4,7 +4,7 @@ tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
 tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
-tl.fromTo(".welcome-content", { opacity: 0 }, { opacity: 1, duration: 1 });
+tl.fromTo(".welcome__content", { opacity: 0 }, { opacity: 1, duration: 1 });
 //t1.fromTo(".background", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 //t1.fromTo(".img__container", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
@@ -41,18 +41,18 @@ const highlightMenu = () => {
         experienceMenu.classList.remove('highlight');
         return;
     } else if (window.innerWidth > 960 && scrollPos < 2650) {
-        projectsMenu.classList.add('highlight');
+        experienceMenu.classList.add('highlight');
 
         aboutMenu.classList.remove('highlight');
         homeMenu.classList.remove('highlight');
-        experienceMenu.classList.remove('highlight');
+        projectsMenu.classList.remove('highlight');
         return;
-    } else if (window.innerWidth > 960 && scrollPos < 2900) {
-        experienceMenu.classList.add('highlight');
-        
+    } else if (window.innerWidth > 960 && scrollPos < 3200) {
+        projectsMenu.classList.add('highlight');
+       
         aboutMenu.classList.remove('highlight');
         homeMenu.classList.remove('highlight');
-        projectsMenu.classList.remove('highlight');
+        experienceMenu.classList.remove('highlight');
         return;
     }
     
