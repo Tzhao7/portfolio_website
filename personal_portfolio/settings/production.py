@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 import os 
-from .secrets import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+SECRET = os.environ.get('DJANGO_SECRET_KEY')
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
