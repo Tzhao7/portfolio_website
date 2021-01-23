@@ -6,7 +6,7 @@
     <title>Terry Zhao's Portfolio Website</title>
     {% load static %}
     <link rel="stylesheet" href="{% static '/styles.css' %}"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1659ff6105.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
@@ -63,8 +63,29 @@
                 <p>Hello, I'm Terry Zhao and I am a junior majoring in Electrical and Computer Engineering at the University of Connecticut.
                     I have an interest in full-stack web development having done front-end and back-end work in internships and projects.
                 </p>
-                <div class="info__container">
-                    <div class="button">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/terry-zhao-1a68b418a" target="_blank"><i class="fab fa-linkedin-in" id="slide-in-1"></i></a>
+                        <a href="https://www.linkedin.com/in/terry-zhao-1a68b418a" target="_blank"><i class="fab fa-linkedin-in" id="slide-out-1"></i></a>
+                    </li> 
+                    <li>
+                        <a href="https://github.com/Tzhao7" target="_blank"><i class="fab fa-github" id="slide-in-2"></i></a>
+                        <a href="https://github.com/Tzhao7" target="_blank"><i class="fab fa-github" id="slide-out-2"></i></a>
+                    </li>   
+                    <li>
+                         <a href="mailto: terry.zhao@uconn.edu" target="_blank"><i class="fas fa-envelope-square" id="slide-in-3"></i></a>
+                         <a href="mailto: terry.zhao@uconn.edu" target="_blank"><i class="fas fa-envelope-square" id="slide-out-3"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% static '/documents/TZ_resume_display.pdf' %}" target="_blank"><i class="fas fa-file" id="slide-in-4"></i></a>
+                        <a href="{% static '/documents/TZ_resume_display.pdf' %}" target="_blank"><i class="fas fa-file" id="slide-out-4"></i></a>
+                    </li>
+                </ul>
+                    <!-- <div class="info__container"></div>
+                </div> !-->
+                    
+                    
+                    <!-- <div class="button">
                         <div class="icon"><a href="https://www.linkedin.com/in/terry-zhao-1a68b418a" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
                         <span>LinkedIn</span>
                     </div>
@@ -80,8 +101,8 @@
                     <div class="button">
                         <div class="icon"><a href="{% static '/documents/TZ_resume_display.pdf' %}" target="_blank"><i class="fas fa-file"></i></a></div>
                         <span>Resume</span>
-                    </div>
-                </div>
+                    </div> !-->
+                
             </div>
         </div>
         <div class="experience" id="experience">
@@ -164,70 +185,70 @@
                             </div>
                         </div>
                         <div class="slide">
-                                <h1>Software Skills (Winter 2019) </h1>
-                                <div class="skillBox">
-                                    <p>C++</p>
-                                    <p>70%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 90%"></div>
-                                    </div>
+                            <h1>Software Skills (Winter 2019) </h1>
+                            <div class="skillBox">
+                                <p>C++</p>
+                                <p>70%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 90%"></div>
                                 </div>
-                                <div class="skillBox">
-                                    <p>Python</p>
-                                    <p>70%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 85%"></div>
-                                    </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>Python</p>
+                                <p>70%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
                                 </div>
-                                <div class="skillBox">
-                                    <p>MATLAB/Simulink</p>
-                                    <p>50%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 85%"></div>
-                                    </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>MATLAB/Simulink</p>
+                                <p>50%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
                                 </div>
-                                <div class="skillBox">
-                                    <p>Wireshark</p>
-                                    <p>70%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 85%"></div>
-                                    </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>Wireshark</p>
+                                <p>70%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
                                 </div>
+                            </div>
                         </div>
                         <div class="slide">
-                                <h1>Software Skills (Summer 2020) </h1>
-                                <div class="skillBox">
-                                    <p>C++</p>
-                                    <p>90%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 90%"></div>
-                                    </div>
+                            <h1>Software Skills (Summer 2020) </h1>
+                            <div class="skillBox">
+                                <p>C++</p>
+                                <p>90%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 90%"></div>
                                 </div>
-                                <div class="skillBox">
-                                    <p>Java</p>
-                                    <p>85%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 85%"></div>
-                                    </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>Java</p>
+                                <p>85%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
                                 </div>
-                                <div class="skillBox">
-                                    <p>GitLab</p>
-                                    <p>85%</p>
-                                    <div class="skill">
-                                        <div class="skill_level" style="width: 85%"></div>
-                                    </div>
+                            </div>
+                            <div class="skillBox">
+                                <p>GitLab</p>
+                                <p>85%</p>
+                                <div class="skill">
+                                    <div class="skill_level" style="width: 85%"></div>
                                 </div>
+                            </div>
                         </div>
                         <div class="navigation__auto">
                             <div class="auto__btn1"></div>
                             <div class="auto__btn2"></div>
                             <div class="auto__btn3"></div>
                         </div>
-                    </div>
-                    <div class="navigation__manual">
-                        <label for="radio1" class="manual__btn"></label>
-                        <label for="radio2" class="manual__btn"></label>
-                        <label for="radio3" class="manual__btn"></label>
+                        <div class="navigation__manual">
+                            <label for="radio1" class="manual__btn"></label>
+                            <label for="radio2" class="manual__btn"></label>
+                            <label for="radio3" class="manual__btn"></label>
+                        </div>
                     </div>
                 </div>
                 <button data-close-button class="modal__close">&times;</button>

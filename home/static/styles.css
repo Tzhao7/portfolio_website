@@ -6,28 +6,7 @@
     scroll-behavior: smooth;
 }
 
-.background {
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    animation: change 10s ease-in-out infinite;
-    background-size: 400% 400%;
-}
-
-@keyframes change {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
-
-.highlight {
-    border-bottom: 4px solid rgb(132, 0, 255);
-}
-
+/* Nav Bar CSS */
 .navbar {
     background: #242582;
     height: 80px;
@@ -92,6 +71,7 @@
     transition: all 0.3s ease;
 }
 
+/* Nav Bar Mobile Responsive CSS*/
 @media screen and (max-width: 960px) {
     .navbar__container {
         display: flex;
@@ -175,6 +155,7 @@
     }
 }
 
+/* Welcome Section CSS */
 .welcome {
     background: url(images/NewYorkCity.bmp) no-repeat center center fixed;
     display: table;
@@ -225,24 +206,33 @@
     width: 80%;
 }
 
+/* Mobile Responsive Welcome Section */
 @media screen and (max-width: 758px) {
+
+    .welcome {
+        padding: 180px 0;
+    }
+
     .welcome__content {
         text-align: center;
-        margin-bottom: 4rem;
     }
 
     .welcome__content h1 {
         font-size: 2.5rem;
-        margin-top: 2rem;
     }
 
     .welcome__content p {
-        margin-top: 1rem;
+        margin-top: 2rem;
         font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
+    
+    .welcome {
+        padding: 100px 0;
+    }
+
     .welcome__content h1 {
         font-size: 2rem;
         margin-top: 3rem;
@@ -254,6 +244,7 @@
     }
 }
 
+/* Intro Scene CSS */
 .intro {
     background: black;
     position: fixed;
@@ -294,6 +285,37 @@
     display: inline-block
 }
 
+/* Mobile-Responsive Intro */
+@media screen and (max-width: 480px) {
+    .intro-text {
+        font-size: 2rem;
+    }
+}
+
+/* Dynamic Background CSS */
+.background {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    animation: change 10s ease-in-out infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+/* About Section CSS */
 .about {
     padding: 140px 0;
     background: url(images/UConn.jpg) no-repeat center center fixed;
@@ -343,104 +365,176 @@
     text-shadow: 1px 1px #000;
 }
 
-@media screen and (max-width: 960px) {
+/* About Section Mobile Responsive */
+@media screen and (max-width: 768px) {
+    
     .about__container p {
         padding-left: 1rem;
         padding-right: 1rem; 
     }
 }
 
-.info__container {
-    margin-top: 2.5rem;
-}
+@media screen and (max-width: 480px) {
 
-.info__container .button {
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    float: left;
-    margin: 0 5px;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-.info__container .button:hover {
-    width: 200px;
-    background: lightgrey;
-}
-
-.info__container .button .icon {
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    text-align: center;
-    border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-}
-
-.info__container .button:nth-child(1):hover .icon {
-    background: #2867b2;
-}
-
-.info__container .button:nth-child(2):hover .icon {
-    background: #333;
-}
-
-.info__container .button:nth-child(3):hover .icon {
-    background: #ff0000;
-}
-
-.info__container .button:nth-child(4):hover .icon {
-    background: #1DA1F2;
-}
-
-.info__container .button .icon i {
-    font-size: 25px;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-    color: #000;
-}
-
-.info__container .button:hover .icon i {
-    color: #fff;
-}
-
-.info__container .button span {
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 60px;
-    margin-left: 10px;
-    transition: all 0.3s ease-out;
-}
-
-.info__container .button:nth-child(1) span {
-    color: #2867b2;
-}
-
-.info__container .button:nth-child(2) span {
-    color: #333;
-}
-
-.info__container .button:nth-child(3) span {
-    color: #ff0000;
-}
-
-.info__container .button:nth-child(4) span {
-    color: #1DA1F2;
-}
-
-@media screen and (max-width: 500px) {
-    .info__container .button:hover {
-        width: 60px;
+    .about {
+        padding: 40px;
     }
 }
 
+.about__container ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 2.5rem;
+}
+
+.about__container ul li {
+    position: relative;
+    background: white;
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    border: 3px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.about__container ul li .fab {
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.about__container ul li .fas {
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.about__container ul li:nth-child(1) {
+    border-color: #2867b2;
+}
+
+.about__container ul li:nth-child(1) #slide-out-1 {
+    color: #2867b2;
+}
+
+.about__container ul li:nth-child(2) {
+    border-color:  #333;
+}
+
+.about__container ul li:nth-child(2) #slide-out-2 {
+    color:  #333;
+}
+
+.about__container ul li:nth-child(3) {
+    border-color: #ff0000;
+}
+
+.about__container ul li:nth-child(3) #slide-out-3 {
+    color: #ff0000;
+}
+
+.about__container ul li:nth-child(4) {
+    border-color: #1DA1F2;
+}
+
+.about__container ul li:nth-child(4) #slide-out-4 {
+    color: #1DA1F2;
+}
+
+.about__container ul li:hover:nth-child(1) {
+    background:  #2867b2;
+}
+
+.about__container ul li:hover:nth-child(2) {
+    background:  #333;
+}
+
+.about__container ul li:hover:nth-child(3) {
+    background: #ff0000;
+}
+
+.about__container ul li:hover:nth-child(4) {
+    background: #1DA1F2;
+}
+
+.about__container ul li #slide-in-1 {
+    left: -50%;
+    opacity: 0;
+}
+
+.about__container ul li:hover #slide-in-1 {
+    left: 50%;
+    opacity: 1;
+    color: white;
+}
+
+.about__container ul li:hover #slide-out-1{
+    left: 150%;
+    opacity: 0;
+}
+
+.about__container ul li #slide-in-2 {
+    left: -50%;
+    opacity: 0;
+}
+
+.about__container ul li:hover #slide-in-2 {
+    left: 50%;
+    opacity: 1;
+    color: white;
+}
+
+.about__container ul li:hover #slide-out-2{
+    left: 150%;
+    opacity: 0;
+}
+
+.about__container ul li #slide-in-3 {
+    left: -50%;
+    opacity: 0;
+}
+
+.about__container ul li:hover #slide-in-3 {
+    left: 50%;
+    opacity: 1;
+    color: white;
+}
+
+.about__container ul li:hover #slide-out-3{
+    left: 150%;
+    opacity: 0;
+}
+
+.about__container ul li #slide-in-4 {
+    left: -50%;
+    opacity: 0;
+}
+
+.about__container ul li:hover #slide-in-4 {
+    left: 50%;
+    opacity: 1;
+    color: white;
+}
+
+.about__container ul li:hover #slide-out-4{
+    left: 150%;
+    opacity: 0;
+}
+
+/* Projects Section CSS */
 .projects {
     display: flex;
     flex-direction: column;
@@ -474,9 +568,10 @@
     justify-items: center;
 }
 
+/* Mobile Responsive Projects Section */
 @media screen and (max-width: 960px) {
     .projects {
-        padding: 110px 0;
+        padding: 0;
     }
 
     .projects__container {
@@ -485,13 +580,9 @@
         grid-gap: 2.5rem;
         padding: 2.5rem;
     }
-
-    .img__container {
-        height: 75%;
-        width: 100%;
-    }
 }
 
+/* Experience Section CSS */
 .experience {
     display: flex;
     flex-direction: column;
@@ -531,9 +622,12 @@
 }
 
 .experience__column h1 {
+    font-size: 2rem;
     color: #131313;
+
 }
 
+/* Mobile Responsive Experience Section */
 @media screen and (max-width: 960px) {
     .experience {
         padding: 90px 25px;
@@ -547,10 +641,12 @@
     }
 
     .experience__column {
+        height: auto;
         width: 100%;
     }
 }
 
+/* Image Container Section CSS */
 .img__container {
     height: 400px;
     width: 500px;
@@ -703,12 +799,6 @@
     width: 400px;
 }
 
-@media screen and (max-width: 500px) {
-    .img__container {
-        width: 100%;
-    }
-}
-
 .description h2 {
     margin: 10px;
     letter-spacing: 3px;
@@ -738,6 +828,14 @@
     box-shadow: inset 150px 0 0 0 #f9e506;
     cursor: pointer;
     color: black;
+}
+
+/* Image Container Mobile Responsive */
+@media screen and (max-width: 480px) {
+    .img__container {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .modal {
@@ -859,8 +957,9 @@
 .navigation__manual {
     position: absolute;
     width: 50%;
-    margin-top: -30px;
+    margin-bottom: 15px;
     display: flex;
+    align-self: flex-end;
     justify-content: center;
 }
 
@@ -896,8 +995,9 @@
     position: absolute;
     display: flex;
     width: 50%;
+    align-self: flex-end;
     justify-content: center;
-    margin-top: 448px;
+    margin-bottom: 15px;
 }
 
 .navigation__auto div {
@@ -940,7 +1040,8 @@
     width: 20px;
 }
 
-@media screen and (max-width: 500px) {
+/* Mobile Responsive Modal Section */
+@media screen and (max-width: 480px) {
     .modal {
         margin: 10%;
         width: 100%;
@@ -948,18 +1049,37 @@
 
     .modal h2 {
         text-align: center;
+        font-size: 20px;
+        margin: 10px;
     }
 
-    .navigation__auto {
-        width: 75%;
-        margin-top: 398px;
+    .modal p {
+        font-size: 10px;
+        line-height: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
     }
 
-    .navigation__manual {
+    .slideshow {
         width: 75%;
+        margin-bottom: 10px;
+    }    
+
+    .skill__chart {
+        width: 75%;
+        font-size: 2rem;
+    }
+
+    .modal__close {
+        right: 5px;
+        height: auto;
+        width: auto;
     }
 }
 
+/* Modal Shadowing */
 #overlay {
     position: fixed;
     opacity: 0;
@@ -976,6 +1096,7 @@
     opacity: 1;
 }
 
+/* Footer Section CSS */
 .footer__container {
     padding: 5rem 0;
     display: flex;
@@ -1032,6 +1153,7 @@
     font-size: 24px;
 }
 
+/* Mobile Responsive Footer */
 @media screen and (max-width: 820px) {
     .footer__links {
         padding-top: 2rem;

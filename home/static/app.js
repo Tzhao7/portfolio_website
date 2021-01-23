@@ -5,8 +5,6 @@ tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo(".welcome__content", { opacity: 0 }, { opacity: 1, duration: 1 });
-//t1.fromTo(".background", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
-//t1.fromTo(".img__container", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
 
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
